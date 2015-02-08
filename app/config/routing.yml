@@ -1,3 +1,4 @@
-app:
-    resource: @AppBundle/Controller/
-    type:     annotation
+vyper_site:
+    resource: "@VyperSiteBundle/Resources/config/routing.yml"
+    prefix:   /
+
