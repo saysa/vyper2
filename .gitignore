@@ -17,6 +17,7 @@
 # Managed by Composer
 /app/bootstrap.php.cache
 /var/bootstrap.php.cache
+/app/bootstrap*
 /bin/*
 !bin/console
 !bin/symfony_requirements
@@ -32,3 +33,5 @@
 
 # Composer PHAR
 /composer.phar
+
+.DS_Store
