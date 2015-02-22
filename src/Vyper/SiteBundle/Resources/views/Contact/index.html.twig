@@ -1,0 +1,78 @@
+{% extends 'VyperSiteBundle::layout.html.twig' %}
+{% block content %}
+    <div class="google_map_holder">
+        <div class="google_map" id="map_canvas">
+            <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script><div style="overflow:hidden;height:450px;width:100%;"><div id="gmap_canvas" style="height:450px;width:100%;"></div><a class="google-map-code" href="http://www.map-embed.com" id="get-map-data">www.map-embed.com</a><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type="text/javascript"> function init_map(){var myOptions = {zoom:12,center:new google.maps.LatLng(48.8122224,2.2106036),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(48.8122224,2.2106036)});infowindow = new google.maps.InfoWindow({content:"<img src='http://localhost:8080/bundles/vypersite/img/logo.png' height='30' alt='' />" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+
+            {#
+            <iframe width="100%" scrolling="no" height="450" frameborder="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=
+22 rue Richer, 75009, Paris&amp;z=12&amp;iwloc=near&amp;output=embed" marginwidth="0" marginheight="0"></iframe>
+            #}
+
+        </div>
+    </div>
+
+
+
+    <section class="cta cta-3">
+        <div class="container">
+            <div class="col-sm-12 text-center">
+                <h5>CONTACTEZ-NOUS</h5>
+            </div>
+            <div class="separator small center"></div>
+            <h5 class="text-center">Que vous soyez lecteur, professionnel ou annonceur, chez Vyper le partage est de rigueur.</h5>
+
+            <div class="row v-align-children" style="margin-top: 50px;">
+                <div class="col-sm-4 col-md-4 text-left">
+                    <h3>La maison</h3>
+                        <p>
+                            8 Rue Camille Desmoulins<br>
+                            92310 Sèvres - France<br>
+                            Email: contact@vyper-jmusic.com<br>
+                            Phone: +33 (0) 6 59 51 94 80
+                        </p>
+                </div>
+
+                <div class="col-md-7 col-sm-8">
+                    <form class="form-email" method="post">
+                        <h6>MERCI DE REMPLIR LE FORMULAIRE SUIVANT<br>
+                            (OU NOUS ADDRESSER UN MESSAGE À CONTACT@VYPER-JMUSIC.COM)</h6>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <input type="text" name="name" class="signup-name-field validate-required" placeholder="Prénom *">
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <input type="text" name="name" class="signup-name-field validate-required" placeholder="Nom *">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <input type="text" name="name" class="signup-name-field validate-required" placeholder="Email *">
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <input type="text" name="name" class="signup-name-field validate-required" placeholder="Site Internet">
+                            </div>
+                        </div>
+
+
+                        <textarea rows="10" class="boxsizingBorder" placeholder="Message"></textarea>
+                        <input type="submit" value="Envoyer »">
+
+                        <div class="form-error">
+                            <span>Please fill all fields correctly</span>
+                        </div>
+
+                        <div class="form-success">
+                            <span>Thanks, your details were sent</span>
+                        </div>
+                        <iframe srcdoc="" class="mail-list-form">
+                        </iframe>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+

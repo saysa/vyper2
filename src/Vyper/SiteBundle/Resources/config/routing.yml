@@ -1,3 +1,19 @@
 vyper_site_homepage:
     path:     /
     defaults: { _controller: VyperSiteBundle:Index:index }
+
+vyper_site_news:
+    path:     /news
+    defaults: { _controller: VyperSiteBundle:News:index }
+
+vyper_site_contact:
+    path:     /contact
+    defaults: { _controller: VyperSiteBundle:Contact:index }
+
+vyper_site_a_propos:
+    path:     /a-propos
+    defaults: { _controller: VyperSiteBundle:Apropos:index }
+
+vyper_site_jobs:
+    path:     /jobs
+    defaults: { _controller: VyperSiteBundle:Jobs:index }

@@ -1,0 +1,85 @@
+#main-menu li a {
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    color: #9d9d9d;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.nav-1.shrink .logo,
+.nav-1 .logo {
+    margin-top: 0;
+}
+
+nav .logo {
+    max-height: 99px;
+}
+
+.separator.small {
+    background-color: #303030;
+    height: 2px;
+    position: relative;
+    width: 22px;
+    display: block;
+    margin: 60px auto 20px auto;
+}
+
+.main-container {
+    padding-top: 100px;
+}
+
+.first-title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 46px;
+}
+
+.qbutton.white {
+    border-color: #fff;
+    color: #fff;
+    margin: 10px 0 0 10px;
+}
+
+section.red .qbutton,
+.qbutton {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    height: 39px;
+    line-height: 39px;
+    padding: 0 23px;
+    border: 2px solid #FFF;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: inherit;
+    text-align: left;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    text-shadow: none;
+    background-color: transparent;
+}
+
+.qbutton:hover {
+    background-color: #D84E51;
+    border-color: #D84E51;
+    color: #FFF;
+}
+section.red .qbutton:hover {
+    background-color: #FFF;
+    border-color: #FFF;
+    color: #D84E51;
+}
+
+.boxsizingBorder {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #eee;
+    padding: 15px 12px;
+}
+
+.bgdark {
+    background: #efefef;
+}

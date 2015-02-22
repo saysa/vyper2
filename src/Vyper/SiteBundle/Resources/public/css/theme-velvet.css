@@ -999,8 +999,8 @@ nav ul li:hover .subnav .subnav {
   -moz-transition: all 0.3s ease;
 }
 .nav-1 .navbar {
-  height: 80px;
-  max-height: 80px;
+  height: 100px;
+  max-height: 100px;
   background: #fff;
   margin: 0;
 }
