@@ -17,3 +17,7 @@ vyper_site_a_propos:
 vyper_site_jobs:
     path:     /jobs
     defaults: { _controller: VyperSiteBundle:Jobs:index }
+
+vyper_site_magazine:
+    path:     /magazine
+    defaults: { _controller: VyperSiteBundle:Magazine:index }

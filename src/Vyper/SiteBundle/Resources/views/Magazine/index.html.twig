@@ -1,0 +1,53 @@
+{% extends 'VyperSiteBundle::layout.html.twig' %}
+{% block content %}
+    <section class="header header-11 overlay">
+
+        <div class="background-image-holder">
+            <img alt="Background Image" class="background-image" src="{{ asset('bundles/vypersite/img/bg/jobs.jpg') }}">
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2 class="text-white">MAGAZINE</h2>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing pricing-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h5>LE MAGAZINE PROPOSE</h5>
+                </div>
+                <div class="separator small center"></div>
+            </div>
+
+            Description attractif du mag
+
+
+        </div>
+    </section>
+
+    <section class="features features-13 red">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 text-right">
+                    <h5 class="text-white">Profitez maintenant du magazine le plus complet en France ainsi que des avantages exclusifs proposés par Vyper</h5>
+
+                </div>
+
+                <div class="col-md-3">
+                    <a class="qbutton white" href="{{ path('vyper_site_contact') }}">JE M'ABONNE</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}
+
+
