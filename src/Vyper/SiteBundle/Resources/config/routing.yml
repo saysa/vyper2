@@ -21,3 +21,7 @@ vyper_site_jobs:
 vyper_site_magazine:
     path:     /magazine
     defaults: { _controller: VyperSiteBundle:Magazine:index }
+
+vyper_site_faq:
+    path:     /faq
+    defaults: { _controller: VyperSiteBundle:Faq:index }
