@@ -83,3 +83,7 @@ section.red .qbutton:hover {
 .bgdark {
     background: #efefef;
 }
+
+.cta-4 img {
+    max-height: 200px;
+}

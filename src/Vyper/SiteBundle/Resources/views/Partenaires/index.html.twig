@@ -1,0 +1,54 @@
+{% extends 'VyperSiteBundle::layout.html.twig' %}
+{% block content %}
+
+
+    <section class="cta cta-4">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h3>Nos partenaires</h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <a href="http://japanfm.fr">
+                        <img alt="Affiliate" src="{{ asset('bundles/vypersite/img/partners/JapanFM.jpg') }}">
+                    </a>
+                    <a href="http://www.rokkyuu.com">
+                        <img alt="Affiliate" src="{{ asset('bundles/vypersite/img/partners/Rokkyuu.jpg') }}">
+                    </a>
+                    <a href="http://33degrees.eu/">
+                        <img alt="Affiliate" src="{{ asset('bundles/vypersite/img/partners/33DEGREES.jpg') }}">
+                    </a>
+                    <a href="http://www.too-wild.com/">
+                        <img alt="Affiliate" src="{{ asset('bundles/vypersite/img/partners/TooWild.jpg') }}">
+                    </a>
+                    <a href="http://www.unbounded.fr/">
+                        <img alt="Affiliate" src="{{ asset('bundles/vypersite/img/partners/Unbounded.jpg') }}">
+                    </a>
+                    <a href="http://www.mangazur.fr/">
+                        <img alt="Affiliate" src="{{ asset('bundles/vypersite/img/partners/Mangazur.jpg') }}">
+                    </a>
+                    <a href="http://www.geekmemore.com/">
+                        <img alt="Affiliate" src="{{ asset('bundles/vypersite/img/partners/GMM.jpg') }}">
+                    </a>
+
+
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h5 style="margin-top: 50px;">Rejoignez nos nombreux partenaires et bénéficiez de la visibilité VYPER.</h5>
+                    <a class="btn btn-filled super-action" href="{{ path('vyper_site_contact') }}">Contact</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}
+

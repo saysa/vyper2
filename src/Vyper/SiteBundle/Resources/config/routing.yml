@@ -25,3 +25,7 @@ vyper_site_magazine:
 vyper_site_faq:
     path:     /faq
     defaults: { _controller: VyperSiteBundle:Faq:index }
+
+vyper_partenaires:
+    path:     /partenaires
+    defaults: { _controller: VyperSiteBundle:Partenaires:index }
