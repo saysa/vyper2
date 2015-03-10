@@ -25,7 +25,7 @@ class IndexController extends Controller
                 $name = $_POST['newsletter']['name'];
                 $from = $_POST['newsletter']['email'];
                 #$dest = $_POST['objet'] . '@japanfm.fr';
-                $dest = 'saysa_bounkhong@hotmail.com';
+                $dest = 'cyrielle@vyper-jmusic.com';
 
                 $corps = '
                 Nom : ' . $name . '<br />
