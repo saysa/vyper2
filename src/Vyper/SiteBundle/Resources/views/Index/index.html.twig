@@ -31,9 +31,12 @@
                 <div class="col-sm-12 text-center">
                     <h3>Ne manquez rien des nouveautés</h3>
                     <h5>Rejoignez nos milliers d'abonnés, abonnez-vous à la newsletter de VYPER</h5>
-                    <form class="contained-form form-email" method="post">
-                        <input type="text" name="name" class="signup-name-field validate-required" placeholder="Votre nom">
-                        <input type="text" name="email" class="validate-required validate-email signup-email-field" placeholder="Adresse E-Mail">
+                    <form class="contained-form" method="post" {{ form_enctype(form) }}>
+
+                        {{ form_widget(form._token) }}
+
+                        {{ form_widget(form.name, {  'attr': {'class': 'signup-name-field validate-required'} }) }}
+                        {{ form_widget(form.email, {  'attr': {'class': 'validate-required validate-email signup-email-field'} }) }}
                         <input type="submit" value="S'abonner à la newsletter»">
                         <p class="sub">
                             * Nous ne partageons ni diffusons vos données personnelles.
@@ -41,10 +44,11 @@
                         <div class="form-error">
                             <span>Merci de saisir tous les champs corectement</span>
                         </div>
+                        {# On affiche tous les messages flash dont le nom est « info » #}
+                        {% for message in app.session.flashbag.get('info') %}
+                            <div class="form-success"><span>{{ message }}</span></div>
+                        {% endfor %}
 
-                        <div class="form-success">
-                            <span>Merci de nous avoir rejoins</span>
-                        </div>
                         <iframe srcdoc="" class="mail-list-form">
                         </iframe>
                     </form>
