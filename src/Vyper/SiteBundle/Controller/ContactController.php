@@ -25,8 +25,7 @@ class ContactController extends Controller
                 $name = $_POST['contact']['lastname'] . " " . $_POST['contact']['firstname'];
                 $from = $_POST['contact']['email'];
                 $text = $_POST['contact']['message'];
-                #$dest = 'cyrielle@vyper-jmusic.com';
-                $dest = 'saysa_bounkhong@hotmail.com';
+                $dest = 'cyrielle@vyper-jmusic.com';
 
                 $corps = '
                 Nom : ' . $name . '<br />
