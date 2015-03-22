@@ -31,12 +31,13 @@ class ContactController extends Controller
                 $corps = '
                 Nom : ' . $name . '<br />
                 E-Mail : ' . $from . '<br />
+                Site Internet : ' . $_POST['contact']['website'] . '<br />
                 Message : ' . $text . '<br />
 
                 ';
 
                 $message = \Swift_Message::newInstance()
-                    ->setSubject('Inscription newsletter VYPER')
+                    ->setSubject('Message site web VYPER')
                     ->setFrom($from)
                     ->setTo($dest)
                     ->setBody($corps, 'text/html');
