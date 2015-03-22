@@ -36,38 +36,42 @@
                 </div>
 
                 <div class="col-md-7 col-sm-8">
-                    <form class="form-email" method="post">
+                    <form method="post" {{ form_enctype(form) }}>
+
+                        {{ form_widget(form._token) }}
+
                         <h6>MERCI DE REMPLIR LE FORMULAIRE SUIVANT<br>
                             (OU NOUS ADDRESSER UN MESSAGE À CONTACT@VYPER-JMUSIC.COM)</h6>
                         <div class="row">
                             <div class="col-md-6 col-sm-12">
-                                <input type="text" name="name" class="signup-name-field validate-required" placeholder="Prénom *">
+                                {{ form_widget(form.firstname, {  'attr': {'class': 'signup-name-field validate-required'} }) }}
                             </div>
                             <div class="col-md-6 col-sm-12">
-                                <input type="text" name="name" class="signup-name-field validate-required" placeholder="Nom *">
+                                {{ form_widget(form.lastname, {  'attr': {'class': 'signup-name-field validate-required'} }) }}
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-6 col-sm-12">
-                                <input type="text" name="name" class="signup-name-field validate-required" placeholder="Email *">
+                                {{ form_widget(form.email, {  'attr': {'class': 'signup-name-field validate-required'} }) }}
                             </div>
                             <div class="col-md-6 col-sm-12">
-                                <input type="text" name="name" class="signup-name-field validate-required" placeholder="Site Internet">
+                                {{ form_widget(form.website, {  'attr': {'class': 'signup-name-field'} }) }}
                             </div>
                         </div>
 
-
-                        <textarea rows="10" class="boxsizingBorder" placeholder="Message"></textarea>
+                        {{ form_widget(form.message, {  'attr': {'class': 'boxsizingBorder'} }) }}
                         <input type="submit" value="Envoyer »">
-
+                        {#
                         <div class="form-error">
                             <span>Please fill all fields correctly</span>
                         </div>
+                        #}
+                        {# On affiche tous les messages flash dont le nom est « info » #}
+                        {% for message in app.session.flashbag.get('info') %}
+                            <div class="form-success"><span>{{ message }}</span></div>
+                        {% endfor %}
 
-                        <div class="form-success">
-                            <span>Thanks, your details were sent</span>
-                        </div>
                         <iframe srcdoc="" class="mail-list-form">
                         </iframe>
                     </form>

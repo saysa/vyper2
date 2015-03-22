@@ -4,15 +4,49 @@ namespace Vyper\SiteBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Vyper\SiteBundle\Form\ContactForm;
+use Symfony\Component\HttpFoundation\Request;
 
 class ContactController extends Controller
 {
     /**
+     * @param \Symfony\Component\HttpFoundation\Request $request
      * @return array
      * @Template
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
-        return array();
+        $form = $this->createForm(new ContactForm);
+
+        if ($request->getMethod() == 'POST') {
+            $form->submit($request);
+            if ($form->isValid()) {
+
+                $name = $_POST['contact']['lastname'] . " " . $_POST['contact']['firstname'];
+                $from = $_POST['contact']['email'];
+                $text = $_POST['contact']['message'];
+                #$dest = 'cyrielle@vyper-jmusic.com';
+                $dest = 'saysa_bounkhong@hotmail.com';
+
+                $corps = '
+                Nom : ' . $name . '<br />
+                E-Mail : ' . $from . '<br />
+                Message : ' . $text . '<br />
+
+                ';
+
+                $message = \Swift_Message::newInstance()
+                    ->setSubject('Inscription newsletter VYPER')
+                    ->setFrom($from)
+                    ->setTo($dest)
+                    ->setBody($corps, 'text/html');
+
+                $this->get('mailer')->send($message);
+
+                $request->getSession()->getFlashBag()->add('info', 'Merci, votre message a bien été envoyé!');
+            }
+        }
+
+        return array('form' => $form->createView());
     }
 }
